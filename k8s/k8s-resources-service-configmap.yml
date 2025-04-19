@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: resources-service-vars
+  namespace: k8s-program-m1
+data:
+  RESOURCES_DB_URL: "postgres-rs.k8s-program-m1.svc.cluster.local"
+  SPRING_DATASOURCE_USERNAME: "postgres"
+  SPRING_DATASOURCE_PASSWORD: "postgres"
+#  SONGS_MS_URL: "<service-name>.<namespace>.svc.cluster.local"
+  SONGS_MS_URL: "songs-service.k8s-program-m1.svc.cluster.local"
+  SONGS_MS_PORT: "8083"
